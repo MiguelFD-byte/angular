@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <ng-container>
+    <span class="spacer"></span>
+    <span id="tittle">Mi app</span>
+    <span class="spacer"></span>
+    <div class="">
+       <a mat-button *ngIf="!isLogged; else viewLogout"
+       [routerLink]="'/login'">Login</a>
+    </div>
+    </ng-container>
+</mat-toolbar>
+
+<ng-template #viewLogout>
+    <a mat-button (click)="onLogOut()">Logout</a>
+    
+    <button id="menu" mat-icon-button (click)="ontToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    
+</ng-template>
+
+
